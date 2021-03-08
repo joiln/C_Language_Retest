@@ -24,17 +24,26 @@ void  Q_6_10();
 void  Q_6_13();
 void  Q_6_14();
 void  Q_6_15();
+void  q();
 
 using namespace std;
 
 int main() {
 //    L_6_5();
 //    L_6_8();
-    Q_6_1();
+//    Q_6_1();
 
+    char a[]="aaabbbcc";
 
+    printf("%s",a);
     return 0;
 }
+void  q(){
+
+
+}
+
+
 /*
  *用malloc动态申请一个二维数组的三种方法
  *方法一: 利用二级指针申请一个二维数组。
@@ -43,8 +52,28 @@ void demo_1(){
     int n,m; //创建一个n*m 的二维数组
     int **num = (int **)malloc(sizeof (int *)*n);   //有n行，每行中的元素大小为 sizeof(int *)
 
+    for (int i = 0; i < n; ++i) {
+        num[i] = (int *)malloc(sizeof (int )* m);   //给每行中每个元素开辟空间
+    }
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
+        printf("%d",num[i][j]);
+        }
+    }
 
+    for (int i = 0; i < n; ++i) {
+        free(num[i]);       //释放每一行中的没个元素
+    }
+    free(num);  //释放每一行，即释放整个二维数组
 }
+//用数组指针形式申请一个二维数组。
+
+
+
+
+
+
+
 
 void  Q_6_1(){ //用筛选法求100以内素数
     int n;
@@ -52,15 +81,17 @@ void  Q_6_1(){ //用筛选法求100以内素数
     int *num = (int  *)malloc(n * sizeof (int));    //动态开辟内存
     *(num + 0) = 0;
 
-    for (int i = 1; i <= n; ++i) {
+    for (int i = 1; i <= n; ++i)   {
             num[i] = i;
     }
     *(num + 0) = 0;
 
-    for (int i = 0; i < n; ++i) {
-        printf("%d ",*(num+i));
+    for (int i = 2; i <= sqrt(n); ++i) {
+        if(num);
     }
+    for (int i = 0; i < n; ++i) {
 
+    }
 
 
     free(num);  //动态开辟内存后，要用free()释放,因为malloc()、calloc()、realloc()申请的内存系统不是自己释放
