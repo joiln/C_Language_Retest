@@ -1,0 +1,3 @@
+"D:\NewFile\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Q_4_9.cpp.dir/objects.a
+D:\Dev-cpp5.4.0\Dev-Cpp\MinGW32\bin\ar.exe cr CMakeFiles\Q_4_9.cpp.dir/objects.a @CMakeFiles\Q_4_9.cpp.dir\objects1.rsp
+D:\Dev-cpp5.4.0\Dev-Cpp\MinGW32\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\Q_4_9.cpp.dir/objects.a -Wl,--no-whole-archive  -o Q_4_9.cpp.exe -Wl,--out-implib,libQ_4_9.cpp.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Q_4_9.cpp.dir\linklibs.rsp

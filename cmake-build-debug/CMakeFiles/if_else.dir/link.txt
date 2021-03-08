@@ -1,0 +1,3 @@
+"D:\NewFile\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\if_else.dir/objects.a
+D:\Dev-cpp5.4.0\Dev-Cpp\MinGW32\bin\ar.exe cr CMakeFiles\if_else.dir/objects.a @CMakeFiles\if_else.dir\objects1.rsp
+D:\Dev-cpp5.4.0\Dev-Cpp\MinGW32\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\if_else.dir/objects.a -Wl,--no-whole-archive  -o if_else.exe -Wl,--out-implib,libif_else.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\if_else.dir\linklibs.rsp

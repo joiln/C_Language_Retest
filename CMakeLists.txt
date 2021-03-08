@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.15)
+project(C_Language_Retest)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(C_Language_Retest main.cpp q1.cpp )
+add_executable(demo_2_19  demo_2_19.cpp)
+add_executable(Q_3_6 Q_3_6.cpp)
+add_executable(Q_4_9.cpp Q_4_9.cpp)
+add_executable(trigle trigle.cpp)
+add_executable(if_else if_else.cpp)
+add_executable(01_Practice_chapter_5 01_Practice_chapter_5.cpp)
+add_executable(5_8 5_8.cpp)
+add_executable(5_3 5_3.cpp)
+add_executable(02_Practice_chapter_5 02_Practice_chapter_5.cpp)
+add_executable(03_Practice_chapter_6 03_Practice_chater_6.cpp)
+add_executable(04_Practice_chapter_7 04_Practice_chater_7.cpp)
+add_executable(05_Practice_chapter_9 05_Practice_chater_9.cpp)
