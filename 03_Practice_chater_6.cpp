@@ -31,11 +31,8 @@ using namespace std;
 int main() {
 //    L_6_5();
 //    L_6_8();
-//    Q_6_1();
+    Q_6_1();
 
-    char a[]="aaabbbcc";
-
-    printf("%s",a);
     return 0;
 }
 void  q(){
@@ -59,7 +56,15 @@ void  q(){
 
     用指向多维数组的指针作为函数参数
     一维数组的地址可以作为函数参数，多维数组的地址也可作函数参数。在用指针变量作形参以接受实参数组名传递来的地址时，
-    有两种方法：用指向变量的指针变量和用指向一维数组的指针变量（上一个例子p=a【0】）
+    有两种方法：用指向变量的指针变量 和 用指向一维数组的指针变量（上一个例子p=a[0]）
+
+    例：double (int (*p)[4],int n);   传进去一个二维数组
+
+用指针变量指向一个字符串
+    用指针变量指向一个字符串常量对于字符串而言，也可以不定义字符数组，直接定义指向字符串的指针变量，利用该指针变量对字符串进行操作
+    char *string ="I am a student. ";
+    printf(" %s\n"，string);
+
 
  *
  * */
@@ -90,7 +95,11 @@ void demo_1(){
 // 数组指针==>int *(num)[2];
 
 
+void demo_2(){
+    int n,m;
+    int **num = (int **)malloc(sizeof (int *) * n); //n行
 
+}
 
 
 
@@ -102,18 +111,23 @@ void  Q_6_1(){ //用筛选法求100以内素数
     *(num + 0) = 0;
 
     for (int i = 1; i <= n; ++i)   {
-            num[i] = i;
+           *(num + i) = i;
     }
-    *(num + 0) = 0;
-
+    *(num + 1) = 0;
     for (int i = 2; i <= sqrt(n); ++i) {
-        if(num);
+        for (int j = i+1; j < n; ++j) {
+            if(*(num + i) != 0 && *(num + j) != 0){
+                if(*(num + j) % *(num + i) == 0)
+                *(num + j) = 0;
+            }
+        }
+
     }
     for (int i = 0; i < n; ++i) {
+        if (*(num + i) != 0)
+        printf("%d ",*(num + i));
 
     }
-
-
     free(num);  //动态开辟内存后，要用free()释放,因为malloc()、calloc()、realloc()申请的内存系统不是自己释放
 }
 
