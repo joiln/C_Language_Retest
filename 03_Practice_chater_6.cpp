@@ -406,9 +406,9 @@ void Q_6_13(){
     char * string1,*string2,*temp;
 //    gets(string1);
 //    gets(string2);
-//    scanf("%s",string1);
-//    scanf("%s",string2);
-    for (int i = 0; string1[i] != '\0'; ++i) {
+    scanf("%s",string1);
+    scanf("%s",string2);
+    for (int i = 0; *(string1 + i) != '\0'; ++i) {
         count++;
     }
     for (int i = 0; string2[i] != '\0'; ++i) {

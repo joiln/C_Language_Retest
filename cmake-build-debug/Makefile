@@ -286,17 +286,30 @@ trigle/fast:
 .PHONY : 04_Practice_chapter_7/fast
 
 #=============================================================================
-# Target rules for targets named 05_Practice_chapter_9
+# Target rules for targets named 05_Practice_chapter_8
 
 # Build rule for target.
-05_Practice_chapter_9: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 05_Practice_chapter_9
-.PHONY : 05_Practice_chapter_9
+05_Practice_chapter_8: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 05_Practice_chapter_8
+.PHONY : 05_Practice_chapter_8
 
 # fast build rule for target.
-05_Practice_chapter_9/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\05_Practice_chapter_9.dir\build.make CMakeFiles/05_Practice_chapter_9.dir/build
-.PHONY : 05_Practice_chapter_9/fast
+05_Practice_chapter_8/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\05_Practice_chapter_8.dir\build.make CMakeFiles/05_Practice_chapter_8.dir/build
+.PHONY : 05_Practice_chapter_8/fast
+
+#=============================================================================
+# Target rules for targets named 03_01_Practice_chater_6
+
+# Build rule for target.
+03_01_Practice_chater_6: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 03_01_Practice_chater_6
+.PHONY : 03_01_Practice_chater_6
+
+# fast build rule for target.
+03_01_Practice_chater_6/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\03_01_Practice_chater_6.dir\build.make CMakeFiles/03_01_Practice_chater_6.dir/build
+.PHONY : 03_01_Practice_chater_6/fast
 
 01_Practice_chapter_5.obj: 01_Practice_chapter_5.cpp.obj
 
@@ -352,6 +365,33 @@ trigle/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\02_Practice_chapter_5.dir\build.make CMakeFiles/02_Practice_chapter_5.dir/02_Practice_chapter_5.cpp.s
 .PHONY : 02_Practice_chapter_5.cpp.s
 
+03_01_Practice_chater_6.obj: 03_01_Practice_chater_6.cpp.obj
+
+.PHONY : 03_01_Practice_chater_6.obj
+
+# target to build an object file
+03_01_Practice_chater_6.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\03_01_Practice_chater_6.dir\build.make CMakeFiles/03_01_Practice_chater_6.dir/03_01_Practice_chater_6.cpp.obj
+.PHONY : 03_01_Practice_chater_6.cpp.obj
+
+03_01_Practice_chater_6.i: 03_01_Practice_chater_6.cpp.i
+
+.PHONY : 03_01_Practice_chater_6.i
+
+# target to preprocess a source file
+03_01_Practice_chater_6.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\03_01_Practice_chater_6.dir\build.make CMakeFiles/03_01_Practice_chater_6.dir/03_01_Practice_chater_6.cpp.i
+.PHONY : 03_01_Practice_chater_6.cpp.i
+
+03_01_Practice_chater_6.s: 03_01_Practice_chater_6.cpp.s
+
+.PHONY : 03_01_Practice_chater_6.s
+
+# target to generate assembly for a file
+03_01_Practice_chater_6.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\03_01_Practice_chater_6.dir\build.make CMakeFiles/03_01_Practice_chater_6.dir/03_01_Practice_chater_6.cpp.s
+.PHONY : 03_01_Practice_chater_6.cpp.s
+
 03_Practice_chater_6.obj: 03_Practice_chater_6.cpp.obj
 
 .PHONY : 03_Practice_chater_6.obj
@@ -406,32 +446,32 @@ trigle/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\04_Practice_chapter_7.dir\build.make CMakeFiles/04_Practice_chapter_7.dir/04_Practice_chater_7.cpp.s
 .PHONY : 04_Practice_chater_7.cpp.s
 
-05_Practice_chater_9.obj: 05_Practice_chater_9.cpp.obj
+05_Practice_chater_8.obj: 05_Practice_chater_8.cpp.obj
 
-.PHONY : 05_Practice_chater_9.obj
+.PHONY : 05_Practice_chater_8.obj
 
 # target to build an object file
-05_Practice_chater_9.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\05_Practice_chapter_9.dir\build.make CMakeFiles/05_Practice_chapter_9.dir/05_Practice_chater_9.cpp.obj
-.PHONY : 05_Practice_chater_9.cpp.obj
+05_Practice_chater_8.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\05_Practice_chapter_8.dir\build.make CMakeFiles/05_Practice_chapter_8.dir/05_Practice_chater_8.cpp.obj
+.PHONY : 05_Practice_chater_8.cpp.obj
 
-05_Practice_chater_9.i: 05_Practice_chater_9.cpp.i
+05_Practice_chater_8.i: 05_Practice_chater_8.cpp.i
 
-.PHONY : 05_Practice_chater_9.i
+.PHONY : 05_Practice_chater_8.i
 
 # target to preprocess a source file
-05_Practice_chater_9.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\05_Practice_chapter_9.dir\build.make CMakeFiles/05_Practice_chapter_9.dir/05_Practice_chater_9.cpp.i
-.PHONY : 05_Practice_chater_9.cpp.i
+05_Practice_chater_8.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\05_Practice_chapter_8.dir\build.make CMakeFiles/05_Practice_chapter_8.dir/05_Practice_chater_8.cpp.i
+.PHONY : 05_Practice_chater_8.cpp.i
 
-05_Practice_chater_9.s: 05_Practice_chater_9.cpp.s
+05_Practice_chater_8.s: 05_Practice_chater_8.cpp.s
 
-.PHONY : 05_Practice_chater_9.s
+.PHONY : 05_Practice_chater_8.s
 
 # target to generate assembly for a file
-05_Practice_chater_9.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\05_Practice_chapter_9.dir\build.make CMakeFiles/05_Practice_chapter_9.dir/05_Practice_chater_9.cpp.s
-.PHONY : 05_Practice_chater_9.cpp.s
+05_Practice_chater_8.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\05_Practice_chapter_8.dir\build.make CMakeFiles/05_Practice_chapter_8.dir/05_Practice_chater_8.cpp.s
+.PHONY : 05_Practice_chater_8.cpp.s
 
 5_3.obj: 5_3.cpp.obj
 
@@ -686,9 +726,10 @@ help:
 	@echo ... rebuild_cache
 	@echo ... 01_Practice_chapter_5
 	@echo ... 02_Practice_chapter_5
+	@echo ... 03_01_Practice_chater_6
 	@echo ... 03_Practice_chapter_6
 	@echo ... 04_Practice_chapter_7
-	@echo ... 05_Practice_chapter_9
+	@echo ... 05_Practice_chapter_8
 	@echo ... 5_3
 	@echo ... 5_8
 	@echo ... C_Language_Retest
@@ -703,15 +744,18 @@ help:
 	@echo ... 02_Practice_chapter_5.obj
 	@echo ... 02_Practice_chapter_5.i
 	@echo ... 02_Practice_chapter_5.s
+	@echo ... 03_01_Practice_chater_6.obj
+	@echo ... 03_01_Practice_chater_6.i
+	@echo ... 03_01_Practice_chater_6.s
 	@echo ... 03_Practice_chater_6.obj
 	@echo ... 03_Practice_chater_6.i
 	@echo ... 03_Practice_chater_6.s
 	@echo ... 04_Practice_chater_7.obj
 	@echo ... 04_Practice_chater_7.i
 	@echo ... 04_Practice_chater_7.s
-	@echo ... 05_Practice_chater_9.obj
-	@echo ... 05_Practice_chater_9.i
-	@echo ... 05_Practice_chater_9.s
+	@echo ... 05_Practice_chater_8.obj
+	@echo ... 05_Practice_chater_8.i
+	@echo ... 05_Practice_chater_8.s
 	@echo ... 5_3.obj
 	@echo ... 5_3.i
 	@echo ... 5_3.s
