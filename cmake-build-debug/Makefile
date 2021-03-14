@@ -260,6 +260,19 @@ trigle/fast:
 .PHONY : 5_3/fast
 
 #=============================================================================
+# Target rules for targets named run_nian
+
+# Build rule for target.
+run_nian: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 run_nian
+.PHONY : run_nian
+
+# fast build rule for target.
+run_nian/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\run_nian.dir\build.make CMakeFiles/run_nian.dir/build
+.PHONY : run_nian/fast
+
+#=============================================================================
 # Target rules for targets named 02_Practice_chapter_5
 
 # Build rule for target.
@@ -271,6 +284,19 @@ trigle/fast:
 02_Practice_chapter_5/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\02_Practice_chapter_5.dir\build.make CMakeFiles/02_Practice_chapter_5.dir/build
 .PHONY : 02_Practice_chapter_5/fast
+
+#=============================================================================
+# Target rules for targets named 06_Practice_chater_9
+
+# Build rule for target.
+06_Practice_chater_9: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 06_Practice_chater_9
+.PHONY : 06_Practice_chater_9
+
+# fast build rule for target.
+06_Practice_chater_9/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\06_Practice_chater_9.dir\build.make CMakeFiles/06_Practice_chater_9.dir/build
+.PHONY : 06_Practice_chater_9/fast
 
 #=============================================================================
 # Target rules for targets named 04_Practice_chapter_7
@@ -310,6 +336,19 @@ trigle/fast:
 03_01_Practice_chater_6/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\03_01_Practice_chater_6.dir\build.make CMakeFiles/03_01_Practice_chater_6.dir/build
 .PHONY : 03_01_Practice_chater_6/fast
+
+#=============================================================================
+# Target rules for targets named System_Question
+
+# Build rule for target.
+System_Question: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 System_Question
+.PHONY : System_Question
+
+# fast build rule for target.
+System_Question/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\System_Question.dir\build.make CMakeFiles/System_Question.dir/build
+.PHONY : System_Question/fast
 
 01_Practice_chapter_5.obj: 01_Practice_chapter_5.cpp.obj
 
@@ -473,6 +512,33 @@ trigle/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\05_Practice_chapter_8.dir\build.make CMakeFiles/05_Practice_chapter_8.dir/05_Practice_chater_8.cpp.s
 .PHONY : 05_Practice_chater_8.cpp.s
 
+06_Practice_chater_9.obj: 06_Practice_chater_9.cpp.obj
+
+.PHONY : 06_Practice_chater_9.obj
+
+# target to build an object file
+06_Practice_chater_9.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\06_Practice_chater_9.dir\build.make CMakeFiles/06_Practice_chater_9.dir/06_Practice_chater_9.cpp.obj
+.PHONY : 06_Practice_chater_9.cpp.obj
+
+06_Practice_chater_9.i: 06_Practice_chater_9.cpp.i
+
+.PHONY : 06_Practice_chater_9.i
+
+# target to preprocess a source file
+06_Practice_chater_9.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\06_Practice_chater_9.dir\build.make CMakeFiles/06_Practice_chater_9.dir/06_Practice_chater_9.cpp.i
+.PHONY : 06_Practice_chater_9.cpp.i
+
+06_Practice_chater_9.s: 06_Practice_chater_9.cpp.s
+
+.PHONY : 06_Practice_chater_9.s
+
+# target to generate assembly for a file
+06_Practice_chater_9.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\06_Practice_chater_9.dir\build.make CMakeFiles/06_Practice_chater_9.dir/06_Practice_chater_9.cpp.s
+.PHONY : 06_Practice_chater_9.cpp.s
+
 5_3.obj: 5_3.cpp.obj
 
 .PHONY : 5_3.obj
@@ -580,6 +646,33 @@ Q_4_9.s: Q_4_9.cpp.s
 Q_4_9.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Q_4_9.cpp.dir\build.make CMakeFiles/Q_4_9.cpp.dir/Q_4_9.cpp.s
 .PHONY : Q_4_9.cpp.s
+
+System_Question.obj: System_Question.cpp.obj
+
+.PHONY : System_Question.obj
+
+# target to build an object file
+System_Question.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\System_Question.dir\build.make CMakeFiles/System_Question.dir/System_Question.cpp.obj
+.PHONY : System_Question.cpp.obj
+
+System_Question.i: System_Question.cpp.i
+
+.PHONY : System_Question.i
+
+# target to preprocess a source file
+System_Question.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\System_Question.dir\build.make CMakeFiles/System_Question.dir/System_Question.cpp.i
+.PHONY : System_Question.cpp.i
+
+System_Question.s: System_Question.cpp.s
+
+.PHONY : System_Question.s
+
+# target to generate assembly for a file
+System_Question.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\System_Question.dir\build.make CMakeFiles/System_Question.dir/System_Question.cpp.s
+.PHONY : System_Question.cpp.s
 
 demo_2_19.obj: demo_2_19.cpp.obj
 
@@ -689,6 +782,33 @@ q1.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\C_Language_Retest.dir\build.make CMakeFiles/C_Language_Retest.dir/q1.cpp.s
 .PHONY : q1.cpp.s
 
+run_nian.obj: run_nian.cpp.obj
+
+.PHONY : run_nian.obj
+
+# target to build an object file
+run_nian.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\run_nian.dir\build.make CMakeFiles/run_nian.dir/run_nian.cpp.obj
+.PHONY : run_nian.cpp.obj
+
+run_nian.i: run_nian.cpp.i
+
+.PHONY : run_nian.i
+
+# target to preprocess a source file
+run_nian.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\run_nian.dir\build.make CMakeFiles/run_nian.dir/run_nian.cpp.i
+.PHONY : run_nian.cpp.i
+
+run_nian.s: run_nian.cpp.s
+
+.PHONY : run_nian.s
+
+# target to generate assembly for a file
+run_nian.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\run_nian.dir\build.make CMakeFiles/run_nian.dir/run_nian.cpp.s
+.PHONY : run_nian.cpp.s
+
 trigle.obj: trigle.cpp.obj
 
 .PHONY : trigle.obj
@@ -730,13 +850,16 @@ help:
 	@echo ... 03_Practice_chapter_6
 	@echo ... 04_Practice_chapter_7
 	@echo ... 05_Practice_chapter_8
+	@echo ... 06_Practice_chater_9
 	@echo ... 5_3
 	@echo ... 5_8
 	@echo ... C_Language_Retest
 	@echo ... Q_3_6
 	@echo ... Q_4_9.cpp
+	@echo ... System_Question
 	@echo ... demo_2_19
 	@echo ... if_else
+	@echo ... run_nian
 	@echo ... trigle
 	@echo ... 01_Practice_chapter_5.obj
 	@echo ... 01_Practice_chapter_5.i
@@ -756,6 +879,9 @@ help:
 	@echo ... 05_Practice_chater_8.obj
 	@echo ... 05_Practice_chater_8.i
 	@echo ... 05_Practice_chater_8.s
+	@echo ... 06_Practice_chater_9.obj
+	@echo ... 06_Practice_chater_9.i
+	@echo ... 06_Practice_chater_9.s
 	@echo ... 5_3.obj
 	@echo ... 5_3.i
 	@echo ... 5_3.s
@@ -768,6 +894,9 @@ help:
 	@echo ... Q_4_9.obj
 	@echo ... Q_4_9.i
 	@echo ... Q_4_9.s
+	@echo ... System_Question.obj
+	@echo ... System_Question.i
+	@echo ... System_Question.s
 	@echo ... demo_2_19.obj
 	@echo ... demo_2_19.i
 	@echo ... demo_2_19.s
@@ -780,6 +909,9 @@ help:
 	@echo ... q1.obj
 	@echo ... q1.i
 	@echo ... q1.s
+	@echo ... run_nian.obj
+	@echo ... run_nian.i
+	@echo ... run_nian.s
 	@echo ... trigle.obj
 	@echo ... trigle.i
 	@echo ... trigle.s

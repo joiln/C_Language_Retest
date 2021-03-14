@@ -154,6 +154,8 @@ void L_8_13(){
    printf("%d\n",*(*(p + i) + j)); //用指向二维数组的指针表示二维数组
    printf("%d",b[i * 4 +j]);        //用一维数组表示二位数组 a[i][j] = a[i*m+j] m表示一行中有多少列
 }
+
+
 //8.14 例题
 void average(float  *p,int n){  //*p 是传进来的成绩数组的地址
     float *q;
@@ -189,11 +191,18 @@ void unpass_search(float (*p)[4],int n){
 
 void L_8_14(){
     float  score[3][4] = {65,67,70,60,80,87,90,81,90,99,100,98};
-    average(*score,12);
-    search(score,2);
+
+    average(*score,12);       //*scoer <=> *(score + 0) <=> score[0] 表示0行0列的地址，指向列元素，
+                                // 运算单位为列元素类型（本例列元素单位为float 4个字节）
+                                // 传给形式参数，那么形参得指针类型也要为float
+
+    search(score,2);        //此处用score、(score + 0） 、&score[0] 都可以，都代表行地址，即传入0行的起始地址
     unpass_search(score,3);
 
 }
+/*float score[i][j] 同理，表示行的有 二维数组名score（表示0行起始位置）  <=>  score + i （表示第i行起始地址） <=> &score[i]  取i行首地址
+ * 他们得类型都是行       形式参数 float (*)[j] 接收 一行为参数的地址。
+ * */
 
 //将a字符串赋值给b
 void L_8_19()
@@ -217,24 +226,172 @@ float *search_1(float (*p)[4],int n){   //指向函数的指针：int (*p)(int ,
     /*  p是一个指针，指向包含4个float型元素的一维数组的指针变量
     指向二维数组的指针，int (*p)[n]   指针数组：int *p[n]
     */
-
-
-
+    float *q;
+    q = *(p+n);     //找到所在序号学生的行起始地址，为什么要加 *  因为p是指向二维数组的指针，p+n 表示的是第几行，要得到地址，用*
+    return q;       //返回其指针地址
 }
-
 
 void L_8_25(){
     float score[ ][4] = { {60 , 70 , 80 , 90 } , { 56 , 89 , 67 , 88 } , { 34 , 78 , 90 , 66 } } ;
     float *p;
     int n;
-    cout << "输入序号" << endl;
+    cout << "enter number" << endl;
     cin >> n;
+    n--;
     p = search_1(score,n);
     for (int i = 0; i < 4; ++i) {
-        cout << *(p + i) << " " << endl;
+        cout << *(p + i) << " ";
     }
+}
+
+//上例 中的学生 ， 找出其 中不及格课程的学生及其学生号 。
+float *nupass_search_8_26(float (*p)[4]){  //传入所需要处理的 行地址
+    float *q;
+    q = NULL;
+    for (int i = 0; i < 4; ++i) {
+        if(*(*p + i) < 60)           // (*p + i) 中 需p表示 所要处理的行 起始地址。 *p 表示*(p + 0) 即这行第一列地址 即 &p[][0]
+                                    // (*p + i) 表示这行的第i列 地址 => 最后再取* 表示这行i列元素的值
+         q = *(p + 0);    //返回这行0列的起始地址,即q[][] 类型为float *
+    }               //*p 表示*(p + 0) 即这行第一列地址 类型为floa *
+    return q;
+}
+
+void L_8_26(){
+    float score[ ][4] = { {60 , 70 , 80 , 90 } , { 56 , 89 , 67 , 88 } , { 34 , 78 , 90 , 66 } } ;
+    float *p;
+    for (int i = 0; i < 3; ++i) {                   // score+i 就是把第i行的起始地址传给 形参 float (*p)[4]
+         p = nupass_search_8_26(score + i);     //把每个学生即每行的地址传给search，让search函数去查看每个学生有无挂科
+        if (p == *(score + i)){                 //如果无挂科，search 返回NULL不执行if语句，有挂科，则返回挂科学生即行地址。
+                                                // score+i <=> &score[i] 行起始地址 => *(score + i) <=> score[i] 即score[i][0]地址
+            cout << (p - *score)/4 +1  << " hao " <<"bu ji ge :" <<endl;
+            for (int j = 0; j < 4; ++j) {                           //p返回是 行第一个元素 起始地址 p[][] 类型为float *
+                cout << *(p + j)<<" ";
+            }
+        }
+        cout << endl;
+    }
+}
+
+//8-4题   有 n 个整 数 ， 使前 面 各 数 顺序 向 后 移 m 个位置，最后 m 个数变成最前面 m 个数 ，
+// 写一函数实现以上功能，在主函数中输入 η 个整数和输出调整后 的 n 个数 。
+void transform(int *num,int n,int m){
+    int *p;p = num;
+    int b[n];
+    for (int i = 0; i < n; ++i) {
+        b[i] = p[i];
+    }
+    for (int i = 0; i < m; ++i) {
+        b[i] = p[n-m+i];
+    }
+    for (int i = 0; i < n-m; ++i) {
+        b[n-i-1] = p[n-m-i-1];
+    }
+    for (int i = 0; i < n; ++i) {
+        printf("%d ",b[i]);
+    }
+}
+
+void Q_8_4(){
+    int n,m;
+    cout << " enter value n and m:" << endl;
+    scanf("%d %d",&n,&m);
+    int *num = (int *)malloc(sizeof (int ) * n);
+    for (int i = 0; i < n; ++i) {
+        scanf("%d",num+i);
+    }
+    transform(num,n,m);
+}
+//报数 问题 有 n 个人 围 成 一圈，顺序排号 。从第1个人开始报数〈从 1 到 3 报数〉，凡报到3的人退出圈子，问最后留下的是原来第几号的那位。
+void Q_8_5(){
+    int n;
+    scanf("%d",&n);
+    int *num = (int  * )malloc(sizeof (int )* n);
+    for (int i = 0; i < n; ++i) {
+        *(num + i) = i;
+    }
+    int offset,number,quit_number; //分别为偏移量、报的数、退出的人数
+    offset = number = quit_number = 0;
+    while(quit_number < n-1){   //当推出的人数比1小时
+        if (num[offset] != 0)                   //退出的的人序号为0，当不为0时，number++；报数加一
+        {
+            number++;
+        }
+        if (number == 3){ //如果报数为3
+            num[offset] = 0;    //offset处的人退出，并将其值赋值为0
+            number = 0;         //计数从新开始
+            quit_number ++;     //推出的人数加一
+        }
+        offset ++; //继续处理下一个人
+        if (offset == n){   //当为最后一个人的时候，又往前从第一个开始处理
+            offset = 0;
+        }
+    }
+    while (*num == 0)
+        num++;
+    cout << num;
+}
+
+//报数进阶 => 报数游戏是这样的：有n个人围成一圈，按顺序从1到n编好号。
+// 从第一个人开始报数，报到m（<n）的人退出圈子；下一个人从1开始报数，报到m的人退出圈子。
+// 如此下去，直到留下最后一个人。本题要求编写函数，给出每个人的退出顺序编号。
+void cutoff(int n,int m,int cut[]){
 
 }
+void Q_8_5_1(){
+    int n,m;
+    scanf("%d",&n,&m);
+    int *cut = (int *)malloc(sizeof (int ) * (n-1));
+    cutoff(n,m,cut);
+    for (int i = 0; i < n - 1; ++i) {
+        printf("%d",*(cut + i));
+    }
+}
+//写一函数，求一个字 符 串 的长度。 在 main 函数中输入字 符 串 ，并输出其长度 。
+void Q_8_6(){
+    char s[] ="ahah";
+    char *p;
+    int i;
+    p = s;
+    for ( i = 0;*p != '\0';p++){
+        i++;
+    }
+    printf("%d",i);
+}
+//有一字 符 串 ，包含 n 个字 符 。 写 一 函数，将此字 符 串 中 从第 m 个字 符 开 始的全 部 字 符 复制成为另 一个字 符  串。
+void Q_8_7(){
+//    int n;
+//    scanf("%d",&n);
+//    char *s = (char *)malloc(sizeof (char) * n);
+//    char  *p;p = s;
+//    gets(s);
+//    while (1){
+//        int i = 0;
+//        for (; *p != '\0' ; p++) {
+//            i++;
+//        }
+//        if (n == i)
+//            break;
+//        else
+//            printf("chong xin shu ru");
+//        gets(s);
+//    }
+    int m;cin >> m;
+    char s1[100];
+    char s[] = "habcnjda";
+    char *p; p=s;
+    char *q;
+    int i = 0;
+    for(p = p+m-1;*p != '\0';p++) {
+        s1[i] = *p;
+        i++;
+    }
+    s1[i] = '\0';
+    q = s1;
+    for (;*q != '\0';q++)
+    cout << *q << " ";
+}
+
+
 
 int main() {
 //    demo_str_chr();
@@ -249,7 +406,13 @@ int main() {
 // L_8_9();
 //    L_8_10();
 //    L_8_13();
- L_8_19();
+//    L_8_14();
+// L_8_25();
+//     L_8_26();
+//     Q_8_4();
+//    Q_8_5();
+//    Q_8_6();
+    Q_8_7();
     return 0;
 }
 

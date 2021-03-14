@@ -63,8 +63,11 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Q_4_9.cpp.dir/DependInfo.cmake"
   "CMakeFiles/trigle.dir/DependInfo.cmake"
   "CMakeFiles/5_3.dir/DependInfo.cmake"
+  "CMakeFiles/run_nian.dir/DependInfo.cmake"
   "CMakeFiles/02_Practice_chapter_5.dir/DependInfo.cmake"
+  "CMakeFiles/06_Practice_chater_9.dir/DependInfo.cmake"
   "CMakeFiles/04_Practice_chapter_7.dir/DependInfo.cmake"
   "CMakeFiles/05_Practice_chapter_8.dir/DependInfo.cmake"
   "CMakeFiles/03_01_Practice_chater_6.dir/DependInfo.cmake"
+  "CMakeFiles/System_Question.dir/DependInfo.cmake"
   )

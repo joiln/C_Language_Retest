@@ -437,6 +437,48 @@
 					<DistClean command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="run_nian">
+				<Option output="D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/run_nian.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include/c++"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include/c++/mingw32"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include/c++/backward"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/../../../../include"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 run_nian"/>
+					<CompileFile command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="run_nian/fast">
+				<Option output="D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/run_nian.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include/c++"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include/c++/mingw32"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include/c++/backward"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/../../../../include"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 run_nian/fast"/>
+					<CompileFile command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="02_Practice_chapter_5">
 				<Option output="D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/02_Practice_chapter_5.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug"/>
@@ -474,6 +516,48 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 02_Practice_chapter_5/fast"/>
+					<CompileFile command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="06_Practice_chater_9">
+				<Option output="D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/06_Practice_chater_9.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include/c++"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include/c++/mingw32"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include/c++/backward"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/../../../../include"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 06_Practice_chater_9"/>
+					<CompileFile command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="06_Practice_chater_9/fast">
+				<Option output="D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/06_Practice_chater_9.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include/c++"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include/c++/mingw32"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include/c++/backward"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/../../../../include"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 06_Practice_chater_9/fast"/>
 					<CompileFile command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -605,6 +689,48 @@
 					<DistClean command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="System_Question">
+				<Option output="D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/System_Question.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include/c++"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include/c++/mingw32"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include/c++/backward"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/../../../../include"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 System_Question"/>
+					<CompileFile command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="System_Question/fast">
+				<Option output="D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/System_Question.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include/c++"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include/c++/mingw32"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include/c++/backward"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/../../../../include"/>
+					<Add directory="d:\dev-cpp5.4.0\dev-cpp\mingw32\bin\../lib/gcc/mingw32/4.7.2/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 System_Question/fast"/>
+					<CompileFile command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Dev-cpp5.4.0/Dev-Cpp/MinGW32/bin/mingw32-make.exe -f &quot;D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="D:/Data_Structure_Codes/C_Language_Retest/cmake-build-debug"/>
 				<Option type="4"/>
@@ -644,6 +770,9 @@
 		<Unit filename="D:/Data_Structure_Codes/C_Language_Retest/05_Practice_chater_8.cpp">
 			<Option target="05_Practice_chapter_8"/>
 		</Unit>
+		<Unit filename="D:/Data_Structure_Codes/C_Language_Retest/06_Practice_chater_9.cpp">
+			<Option target="06_Practice_chater_9"/>
+		</Unit>
 		<Unit filename="D:/Data_Structure_Codes/C_Language_Retest/5_3.cpp">
 			<Option target="5_3"/>
 		</Unit>
@@ -656,6 +785,9 @@
 		<Unit filename="D:/Data_Structure_Codes/C_Language_Retest/Q_4_9.cpp">
 			<Option target="Q_4_9.cpp"/>
 		</Unit>
+		<Unit filename="D:/Data_Structure_Codes/C_Language_Retest/System_Question.cpp">
+			<Option target="System_Question"/>
+		</Unit>
 		<Unit filename="D:/Data_Structure_Codes/C_Language_Retest/demo_2_19.cpp">
 			<Option target="demo_2_19"/>
 		</Unit>
@@ -667,6 +799,9 @@
 		</Unit>
 		<Unit filename="D:/Data_Structure_Codes/C_Language_Retest/q1.cpp">
 			<Option target="C_Language_Retest"/>
+		</Unit>
+		<Unit filename="D:/Data_Structure_Codes/C_Language_Retest/run_nian.cpp">
+			<Option target="run_nian"/>
 		</Unit>
 		<Unit filename="D:/Data_Structure_Codes/C_Language_Retest/trigle.cpp">
 			<Option target="trigle"/>
