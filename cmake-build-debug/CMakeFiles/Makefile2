@@ -79,6 +79,7 @@ all: CMakeFiles/5_8.dir/all
 all: CMakeFiles/03_Practice_chapter_6.dir/all
 all: CMakeFiles/Q_3_6.dir/all
 all: CMakeFiles/01_Practice_chapter_5.dir/all
+all: CMakeFiles/07_Practice_chater_10.dir/all
 all: CMakeFiles/Q_4_9.cpp.dir/all
 all: CMakeFiles/trigle.dir/all
 all: CMakeFiles/5_3.dir/all
@@ -86,9 +87,14 @@ all: CMakeFiles/run_nian.dir/all
 all: CMakeFiles/02_Practice_chapter_5.dir/all
 all: CMakeFiles/06_Practice_chater_9.dir/all
 all: CMakeFiles/04_Practice_chapter_7.dir/all
+all: CMakeFiles/2020_3.dir/all
 all: CMakeFiles/05_Practice_chapter_8.dir/all
 all: CMakeFiles/03_01_Practice_chater_6.dir/all
 all: CMakeFiles/System_Question.dir/all
+all: CMakeFiles/2020_C_Retest_01.dir/all
+all: CMakeFiles/2020_3_1.cpp.dir/all
+all: CMakeFiles/2020_5.c.dir/all
+all: CMakeFiles/2020_4.dir/all
 
 .PHONY : all
 
@@ -105,6 +111,7 @@ clean: CMakeFiles/5_8.dir/clean
 clean: CMakeFiles/03_Practice_chapter_6.dir/clean
 clean: CMakeFiles/Q_3_6.dir/clean
 clean: CMakeFiles/01_Practice_chapter_5.dir/clean
+clean: CMakeFiles/07_Practice_chater_10.dir/clean
 clean: CMakeFiles/Q_4_9.cpp.dir/clean
 clean: CMakeFiles/trigle.dir/clean
 clean: CMakeFiles/5_3.dir/clean
@@ -112,9 +119,14 @@ clean: CMakeFiles/run_nian.dir/clean
 clean: CMakeFiles/02_Practice_chapter_5.dir/clean
 clean: CMakeFiles/06_Practice_chater_9.dir/clean
 clean: CMakeFiles/04_Practice_chapter_7.dir/clean
+clean: CMakeFiles/2020_3.dir/clean
 clean: CMakeFiles/05_Practice_chapter_8.dir/clean
 clean: CMakeFiles/03_01_Practice_chater_6.dir/clean
 clean: CMakeFiles/System_Question.dir/clean
+clean: CMakeFiles/2020_C_Retest_01.dir/clean
+clean: CMakeFiles/2020_3_1.cpp.dir/clean
+clean: CMakeFiles/2020_5.c.dir/clean
+clean: CMakeFiles/2020_4.dir/clean
 
 .PHONY : clean
 
@@ -125,7 +137,7 @@ clean: CMakeFiles/System_Question.dir/clean
 CMakeFiles/C_Language_Retest.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\C_Language_Retest.dir\build.make CMakeFiles/C_Language_Retest.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\C_Language_Retest.dir\build.make CMakeFiles/C_Language_Retest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=19,20,21 "Built target C_Language_Retest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=31,32,33 "Built target C_Language_Retest"
 .PHONY : CMakeFiles/C_Language_Retest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -152,7 +164,7 @@ CMakeFiles/C_Language_Retest.dir/clean:
 CMakeFiles/if_else.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\if_else.dir\build.make CMakeFiles/if_else.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\if_else.dir\build.make CMakeFiles/if_else.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=30,31 "Built target if_else"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=42,43 "Built target if_else"
 .PHONY : CMakeFiles/if_else.dir/all
 
 # Build rule for subdir invocation for target.
@@ -179,7 +191,7 @@ CMakeFiles/if_else.dir/clean:
 CMakeFiles/demo_2_19.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\demo_2_19.dir\build.make CMakeFiles/demo_2_19.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\demo_2_19.dir\build.make CMakeFiles/demo_2_19.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=28,29 "Built target demo_2_19"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=40,41 "Built target demo_2_19"
 .PHONY : CMakeFiles/demo_2_19.dir/all
 
 # Build rule for subdir invocation for target.
@@ -206,7 +218,7 @@ CMakeFiles/demo_2_19.dir/clean:
 CMakeFiles/5_8.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\5_8.dir\build.make CMakeFiles/5_8.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\5_8.dir\build.make CMakeFiles/5_8.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=17,18 "Built target 5_8"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=29,30 "Built target 5_8"
 .PHONY : CMakeFiles/5_8.dir/all
 
 # Build rule for subdir invocation for target.
@@ -260,7 +272,7 @@ CMakeFiles/03_Practice_chapter_6.dir/clean:
 CMakeFiles/Q_3_6.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Q_3_6.dir\build.make CMakeFiles/Q_3_6.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Q_3_6.dir\build.make CMakeFiles/Q_3_6.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=22,23 "Built target Q_3_6"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=34,35 "Built target Q_3_6"
 .PHONY : CMakeFiles/Q_3_6.dir/all
 
 # Build rule for subdir invocation for target.
@@ -308,13 +320,40 @@ CMakeFiles/01_Practice_chapter_5.dir/clean:
 .PHONY : CMakeFiles/01_Practice_chapter_5.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/07_Practice_chater_10.dir
+
+# All Build rule for target.
+CMakeFiles/07_Practice_chater_10.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\07_Practice_chater_10.dir\build.make CMakeFiles/07_Practice_chater_10.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\07_Practice_chater_10.dir\build.make CMakeFiles/07_Practice_chater_10.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=15,16 "Built target 07_Practice_chater_10"
+.PHONY : CMakeFiles/07_Practice_chater_10.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/07_Practice_chater_10.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/07_Practice_chater_10.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/07_Practice_chater_10.dir/rule
+
+# Convenience name for target.
+07_Practice_chater_10: CMakeFiles/07_Practice_chater_10.dir/rule
+
+.PHONY : 07_Practice_chater_10
+
+# clean rule for target.
+CMakeFiles/07_Practice_chater_10.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\07_Practice_chater_10.dir\build.make CMakeFiles/07_Practice_chater_10.dir/clean
+.PHONY : CMakeFiles/07_Practice_chater_10.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/Q_4_9.cpp.dir
 
 # All Build rule for target.
 CMakeFiles/Q_4_9.cpp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Q_4_9.cpp.dir\build.make CMakeFiles/Q_4_9.cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Q_4_9.cpp.dir\build.make CMakeFiles/Q_4_9.cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=24,25 "Built target Q_4_9.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=36,37 "Built target Q_4_9.cpp"
 .PHONY : CMakeFiles/Q_4_9.cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -341,7 +380,7 @@ CMakeFiles/Q_4_9.cpp.dir/clean:
 CMakeFiles/trigle.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\trigle.dir\build.make CMakeFiles/trigle.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\trigle.dir\build.make CMakeFiles/trigle.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=34,35 "Built target trigle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=46,47 "Built target trigle"
 .PHONY : CMakeFiles/trigle.dir/all
 
 # Build rule for subdir invocation for target.
@@ -368,7 +407,7 @@ CMakeFiles/trigle.dir/clean:
 CMakeFiles/5_3.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\5_3.dir\build.make CMakeFiles/5_3.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\5_3.dir\build.make CMakeFiles/5_3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=15,16 "Built target 5_3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=27,28 "Built target 5_3"
 .PHONY : CMakeFiles/5_3.dir/all
 
 # Build rule for subdir invocation for target.
@@ -395,7 +434,7 @@ CMakeFiles/5_3.dir/clean:
 CMakeFiles/run_nian.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\run_nian.dir\build.make CMakeFiles/run_nian.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\run_nian.dir\build.make CMakeFiles/run_nian.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=32,33 "Built target run_nian"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=44,45 "Built target run_nian"
 .PHONY : CMakeFiles/run_nian.dir/all
 
 # Build rule for subdir invocation for target.
@@ -497,6 +536,33 @@ CMakeFiles/04_Practice_chapter_7.dir/clean:
 .PHONY : CMakeFiles/04_Practice_chapter_7.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/2020_3.dir
+
+# All Build rule for target.
+CMakeFiles/2020_3.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_3.dir\build.make CMakeFiles/2020_3.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_3.dir\build.make CMakeFiles/2020_3.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=17,18 "Built target 2020_3"
+.PHONY : CMakeFiles/2020_3.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/2020_3.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/2020_3.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/2020_3.dir/rule
+
+# Convenience name for target.
+2020_3: CMakeFiles/2020_3.dir/rule
+
+.PHONY : 2020_3
+
+# clean rule for target.
+CMakeFiles/2020_3.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_3.dir\build.make CMakeFiles/2020_3.dir/clean
+.PHONY : CMakeFiles/2020_3.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/05_Practice_chapter_8.dir
 
 # All Build rule for target.
@@ -557,7 +623,7 @@ CMakeFiles/03_01_Practice_chater_6.dir/clean:
 CMakeFiles/System_Question.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\System_Question.dir\build.make CMakeFiles/System_Question.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\System_Question.dir\build.make CMakeFiles/System_Question.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=26,27 "Built target System_Question"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=38,39 "Built target System_Question"
 .PHONY : CMakeFiles/System_Question.dir/all
 
 # Build rule for subdir invocation for target.
@@ -576,6 +642,114 @@ System_Question: CMakeFiles/System_Question.dir/rule
 CMakeFiles/System_Question.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\System_Question.dir\build.make CMakeFiles/System_Question.dir/clean
 .PHONY : CMakeFiles/System_Question.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/2020_C_Retest_01.dir
+
+# All Build rule for target.
+CMakeFiles/2020_C_Retest_01.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_C_Retest_01.dir\build.make CMakeFiles/2020_C_Retest_01.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_C_Retest_01.dir\build.make CMakeFiles/2020_C_Retest_01.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=25,26 "Built target 2020_C_Retest_01"
+.PHONY : CMakeFiles/2020_C_Retest_01.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/2020_C_Retest_01.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/2020_C_Retest_01.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/2020_C_Retest_01.dir/rule
+
+# Convenience name for target.
+2020_C_Retest_01: CMakeFiles/2020_C_Retest_01.dir/rule
+
+.PHONY : 2020_C_Retest_01
+
+# clean rule for target.
+CMakeFiles/2020_C_Retest_01.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_C_Retest_01.dir\build.make CMakeFiles/2020_C_Retest_01.dir/clean
+.PHONY : CMakeFiles/2020_C_Retest_01.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/2020_3_1.cpp.dir
+
+# All Build rule for target.
+CMakeFiles/2020_3_1.cpp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_3_1.cpp.dir\build.make CMakeFiles/2020_3_1.cpp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_3_1.cpp.dir\build.make CMakeFiles/2020_3_1.cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=19,20 "Built target 2020_3_1.cpp"
+.PHONY : CMakeFiles/2020_3_1.cpp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/2020_3_1.cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/2020_3_1.cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/2020_3_1.cpp.dir/rule
+
+# Convenience name for target.
+2020_3_1.cpp: CMakeFiles/2020_3_1.cpp.dir/rule
+
+.PHONY : 2020_3_1.cpp
+
+# clean rule for target.
+CMakeFiles/2020_3_1.cpp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_3_1.cpp.dir\build.make CMakeFiles/2020_3_1.cpp.dir/clean
+.PHONY : CMakeFiles/2020_3_1.cpp.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/2020_5.c.dir
+
+# All Build rule for target.
+CMakeFiles/2020_5.c.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_5.c.dir\build.make CMakeFiles/2020_5.c.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_5.c.dir\build.make CMakeFiles/2020_5.c.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=23,24 "Built target 2020_5.c"
+.PHONY : CMakeFiles/2020_5.c.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/2020_5.c.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/2020_5.c.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/2020_5.c.dir/rule
+
+# Convenience name for target.
+2020_5.c: CMakeFiles/2020_5.c.dir/rule
+
+.PHONY : 2020_5.c
+
+# clean rule for target.
+CMakeFiles/2020_5.c.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_5.c.dir\build.make CMakeFiles/2020_5.c.dir/clean
+.PHONY : CMakeFiles/2020_5.c.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/2020_4.dir
+
+# All Build rule for target.
+CMakeFiles/2020_4.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_4.dir\build.make CMakeFiles/2020_4.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_4.dir\build.make CMakeFiles/2020_4.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles --progress-num=21,22 "Built target 2020_4"
+.PHONY : CMakeFiles/2020_4.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/2020_4.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/2020_4.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Data_Structure_Codes\C_Language_Retest\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/2020_4.dir/rule
+
+# Convenience name for target.
+2020_4: CMakeFiles/2020_4.dir/rule
+
+.PHONY : 2020_4
+
+# clean rule for target.
+CMakeFiles/2020_4.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_4.dir\build.make CMakeFiles/2020_4.dir/clean
+.PHONY : CMakeFiles/2020_4.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

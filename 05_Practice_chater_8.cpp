@@ -8,6 +8,7 @@
 #include <cmath>
 #include <string.h>
 #include <stdlib.h>
+
 #define N 4
 
 using namespace std;
@@ -15,25 +16,25 @@ using namespace std;
 
 //返回指针值的函数 例题
 // 编写一个名为 str_chr()的函数，它的作用是在一个长串中找到指定字符第次出现的位置，返回该字符的地址。
-char *str_chr(char *p,char s){
-    while (*p != '\0' && *p != s){
+char *str_chr(char *p, char s) {
+    while (*p != '\0' && *p != s) {
         p++;                        //指针可以向后移动，利用*p 来判断p所指向的地址内容是否==s或者=='\0'
     }
-    if(*p == '\0'){
+    if (*p == '\0') {
         return 0;
     } else
         return p;
 }
 
-void demo_str_chr(){
+void demo_str_chr() {
     char str[] = "abcdefghi";
-    char *p,s;
-    scanf("%c",&s);
-    p = str_chr(str,s);
-    if (p == 0){
+    char *p, s;
+    scanf("%c", &s);
+    p = str_chr(str, s);
+    if (p == 0) {
         printf("no");
     } else
-    printf("%d",(p-str) + 1); //p-str => p代表s再字符串中位置所在的地址，-str 表示减去起始地址，就能知道第几位
+        printf("%d", (p - str) + 1); //p-str => p代表s再字符串中位置所在的地址，-str 表示减去起始地址，就能知道第几位
 }                             // 下标是从0开始，所以+1
 
 //指针数组 例题
@@ -43,18 +44,18 @@ void demo_str_chr(){
  解题思路：定义一个指针数组，用各字符串对它进行初始化，然后用选择法排序但不是移动字符串，而是改变指针数组的各元素的指向。
  * */
 
-void sort(char *string[]){
+void sort(char *string[]) {
     char *temp;
     int min;                        //最小下标
     for (int i = 0; i < N - 1; ++i) {
         min = i;                    //假定下表i是最小的
         for (int j = i + 1; j < N; ++j) {
-            if(strcmp(string[min],string[j]) > 0)   //strcmp(str1,str2) 将两个字符串自左向右逐个比较(ASCII值大小比较)；
-                                                    // A->Z > a->z 当出现有a、b 两个不同的字符，谁大，所在的字符串就大
-                                                    // 当 str1 > str2  返回正值； str1 = str2 返回零；str1 < str2 返回负值；
-            min = j;                                //比较每个字符串首地址中字母的大小；
+            if (strcmp(string[min], string[j]) > 0)   //strcmp(str1,str2) 将两个字符串自左向右逐个比较(ASCII值大小比较)；
+                // A->Z > a->z 当出现有a、b 两个不同的字符，谁大，所在的字符串就大
+                // 当 str1 > str2  返回正值； str1 = str2 返回零；str1 < str2 返回负值；
+                min = j;                                //比较每个字符串首地址中字母的大小；
         }
-        if(min != i){
+        if (min != i) {
             temp = string[i];
             string[i] = string[min];
             string[min] = temp;
@@ -62,53 +63,57 @@ void sort(char *string[]){
     }
 }
 
-void print_str( char *string[]) {
+void print_str(char *string[]) {
     for (int i = 0; i < N; ++i) {
-        printf("%s\n",string[i]);     //打印指针数字组中每个元素，即打印每个字符串
+        printf("%s\n", string[i]);     //打印指针数字组中每个元素，即打印每个字符串
     }
 }
 
-void demo_2(){
-    char *string[]={
-            "Follow me","BASIC","Great Wall","Computer design"};
+void demo_2() {
+    char *string[] = {
+            "Follow me", "BASIC", "Great Wall", "Computer design"};
     sort(string);
     print_str(string);
 }
 
 //例题8.8 将数组a中前m个按相反顺序存放
-void reverse(int *num,int m){
+void reverse(int *num, int m) {
     int temp;
-    int *p,*i,*j;
-    int n = (m-1)/2;
-    i= num;j = num + m - 1; p = num + n;         //利用指针 首尾对调 i为首，j为尾，p为中间位置
-    for(;i <= p;i++,j--){
+    int *p, *i, *j;
+    int n = (m - 1) / 2;
+    i = num;
+    j = num + m - 1;
+    p = num + n;         //利用指针 首尾对调 i为首，j为尾，p为中间位置
+    for (; i <= p; i++, j--) {
         temp = *i;
         *i = *j;
         *j = temp;
     }
 }
-void L_8_8(){
-    int n,m;
+
+void L_8_8() {
+    int n, m;
     int *p;             //d定义一个int 类型的指针变量p
-    scanf("%d",&n);
-    int *num = (int *)malloc(sizeof (int ) *n);
+    scanf("%d", &n);
+    int *num = (int *) malloc(sizeof(int) * n);
     for (int i = 0; i < n; ++i) {
-        scanf("%d",num+i);
+        scanf("%d", num + i);
     }
     puts("input m:");
-    scanf("%d",&m);
-    reverse(num,m);
+    scanf("%d", &m);
+    reverse(num, m);
 
 //    for (int i = 0; i < n; ++i) {
 //        printf("%d ",*(num+i));
 //    }
-    for(p = num;p < num + n;p++){
-        printf("%d ",*p);
+    for (p = num; p < num + n; p++) {
+        printf("%d ", *p);
     }
 
 }
+
 //选择法进行排序
-void select_sort(int *num,int n){
+void select_sort(int *num, int n) {
     int temp;
     int min;
     for (int i = 0; i < n - 1; ++i) {      //由于不用与自己比较，所以只循环n-1次
@@ -117,87 +122,92 @@ void select_sort(int *num,int n){
             if (num[min] > num[j])
                 min = j;
         }
-        if(min != i){   //如果最小下标不为i，则要把 下标为min的值 与 下标为i的值 互换
+        if (min != i) {   //如果最小下标不为i，则要把 下标为min的值 与 下标为i的值 互换
             temp = num[i];
             num[i] = num[min];
             num[min] = temp;
         }
     }
 }
-void L_8_10(){
+
+void L_8_10() {
     int n;
     int *p;             //d定义一个int 类型的指针变量p
-    scanf("%d",&n);
-    int *num = (int *)malloc(sizeof (int ) *n);
+    scanf("%d", &n);
+    int *num = (int *) malloc(sizeof(int) * n);
     for (int i = 0; i < n; ++i) {
-        scanf("%d",num+i);
+        scanf("%d", num + i);
     }
-    select_sort(num,n);
+    select_sort(num, n);
 
-    for(p = num ;p < num + n;p++ ){
+    for (p = num; p < num + n; p++) {
         cout << *p << " ";
     }
     cout << endl;
-    for(p = num + n-1;p >= num;p-- ){ //由于是从num起始的地址，一直到num+n-1 的地址，所以反向输出时，p从num+n-1开始；到p>=num为止
+    for (p = num + n - 1; p >= num; p--) { //由于是从num起始的地址，一直到num+n-1 的地址，所以反向输出时，p从num+n-1开始；到p>=num为止
         cout << *p << " ";
     }
     cout << endl;
 }
+
 //用指针输出二维数组中任意一行一列的元素
-void L_8_13(){
-    int i,j;
-   int num[3][4] = {3,2,1,4,5,8,7,9,4,5,1,9};
-   int b[] = {3,2,1,4,5,8,7,9,4,5,1,9};//用b[]来表示二维数组，用一维数组a[i]表示二位数组a[n][m]，a[i][j] = *(*(p + i) + j) = a[i*m + j]
-   int (*p)[4];
-   p = num;
-   scanf("%d,%d",&i,&j);
-   printf("%d\n",*(*(p + i) + j)); //用指向二维数组的指针表示二维数组
-   printf("%d",b[i * 4 +j]);        //用一维数组表示二位数组 a[i][j] = a[i*m+j] m表示一行中有多少列
+void L_8_13() {
+    int i, j;
+    int num[3][4] = {3, 2, 1, 4, 5, 8, 7, 9, 4, 5, 1, 9};
+    int b[] = {3, 2, 1, 4, 5, 8, 7, 9, 4, 5, 1,
+               9};//用b[]来表示二维数组，用一维数组a[i]表示二位数组a[n][m]，a[i][j] = *(*(p + i) + j) = a[i*m + j]
+    int (*p)[4];
+    p = num;
+    scanf("%d,%d", &i, &j);
+    printf("%d\n", *(*(p + i) + j)); //用指向二维数组的指针表示二维数组
+    printf("%d", b[i * 4 + j]);        //用一维数组表示二位数组 a[i][j] = a[i*m+j] m表示一行中有多少列
 }
 
 
 //8.14 例题
-void average(float  *p,int n){  //*p 是传进来的成绩数组的地址
+void average(float *p, int n) {  //*p 是传进来的成绩数组的地址
     float *q;
     float sum = 0.0;
-    for(q = p;q < (p + n);q++){
+    for (q = p; q < (p + n); q++) {
         sum += *q;
     }
-    printf("%5.2f ",sum/n);
+    printf("%5.2f ", sum / n);
 }
-void  search(float (*p)[4],int n){
+
+void search(float (*p)[4], int n) { //float (*p)[4] 表示传入一个指向行的指针变量
     for (int i = 0; i < 4; ++i) {
-        printf("%5.2f ",*(*(p + n) + i)); //要求序号为二的学生的每科成绩，p+n 代表第n行，即n的一个学生,*(*(p+n)+i) 表示各科成绩
+        printf("%5.2f ", *(*(p + n) + i)); //要求序号为二的学生的每科成绩，p+n 代表第n行，即n的一个学生,*(*(p+n)+i) 表示各科成绩
     }
 }
-void unpass_search(float (*p)[4],int n){
+
+void unpass_search(float (*p)[4], int n) {
     int flag;
     for (int i = 0; i < n; ++i) {
         flag = 0;
         for (int j = 0; j < 4; ++j) {
-            if(*(*(p + i)+j) < 60)
+            if (*(*(p + i) + j) < 60)
                 flag = 1;
         }
-            if (flag == 1){
-                printf("bu ji ge");
-                for (int k = 0; k < 4; ++k) {
-                    printf("%5.2f ",*(*(p + i) + k));
-                }
-                cout << "\n";
+        if (flag == 1) {
+            printf("bu ji ge");
+            for (int k = 0; k < 4; ++k) {
+                printf("%5.2f ", *(*(p + i) + k));
             }
+            cout << "\n";
+        }
 
     }
 }
 
-void L_8_14(){
-    float  score[3][4] = {65,67,70,60,80,87,90,81,90,99,100,98};
+void L_8_14() {
+    float score[3][4] = {65, 67, 70, 60, 80, 87, 90, 81, 90, 99, 100, 98};
 
-    average(*score,12);       //*scoer <=> *(score + 0) <=> score[0] 表示0行0列的地址，指向列元素，
-                                // 运算单位为列元素类型（本例列元素单位为float 4个字节）
-                                // 传给形式参数，那么形参得指针类型也要为float
+    average(*score, 12);       //*scoer <=> *(score + 0) <=> score[0] 表示0行0列的地址，指向列元素，
+    // 运算单位为列元素类型（本例列元素单位为float 4个字节）
+    // 传给形式参数，那么形参得指针类型也要为float
 
-    search(score,2);        //此处用score、(score + 0） 、&score[0] 都可以，都代表行地址，即传入0行的起始地址
-    unpass_search(score,3);
+    search(score, 2);        //此处用score、(score + 0） 、&score[0] 都可以，都代表行地址，即传入0行的起始地址
+    unpass_search(score, 3);
 
 }
 /*float score[i][j] 同理，表示行的有 二维数组名score（表示0行起始位置）  <=>  score + i （表示第i行起始地址） <=> &score[i]  取i行首地址
@@ -205,67 +215,71 @@ void L_8_14(){
  * */
 
 //将a字符串赋值给b
-void L_8_19()
-{
+void L_8_19() {
     char a[] = "hahahahahhahaha !";
-    char b[50],*p,*q;
-    p = a;q =b;
+    char b[50], *p, *q;
+    p = a;
+    q = b;
     int i;
-    for ( i = 0;*p != '\0';p++,q++){ //当在验证 是否为'\0'是，p与q已经为 '\0' 的下标了。
+    for (i = 0; *p != '\0'; p++, q++) { //当在验证 是否为'\0'是，p与q已经为 '\0' 的下标了。
         *q = *p;
         i++;
     }
     *(q) = '\0';                    //所以最后直接让q所在下标的地址 赋值 '\0'
-    printf("%s,%d",b,*(q + i));
+    printf("%s,%d", b, *(q + i));
 }
 
 //有若干个学生的成绩（每个学生有4门课程），要求在用户输入学生序号以 后 ，能输出该学生的全部成绩。用指针函数来实现。
 
-float *search_1(float (*p)[4],int n){   //指向函数的指针：int (*p)(int ,int){}  指针函数(返回指针值的函数) int
+float *search_1(float (*p)[4], int n) {   //指向函数的指针：int (*p)(int ,int){}  指针函数(返回指针值的函数) int
 
     /*  p是一个指针，指向包含4个float型元素的一维数组的指针变量
     指向二维数组的指针，int (*p)[n]   指针数组：int *p[n]
     */
     float *q;
-    q = *(p+n);     //找到所在序号学生的行起始地址，为什么要加 *  因为p是指向二维数组的指针，p+n 表示的是第几行，要得到地址，用*
+    q = *(p + n);     //找到所在序号学生的行起始地址，为什么要加 *  因为p是指向二维数组的指针，p+n 表示的是第几行，要得到地址，用*
     return q;       //返回其指针地址
 }
 
-void L_8_25(){
-    float score[ ][4] = { {60 , 70 , 80 , 90 } , { 56 , 89 , 67 , 88 } , { 34 , 78 , 90 , 66 } } ;
+void L_8_25() {
+    float score[][4] = {{60, 70, 80, 90},
+                        {56, 89, 67, 88},
+                        {34, 78, 90, 66}};
     float *p;
     int n;
     cout << "enter number" << endl;
     cin >> n;
     n--;
-    p = search_1(score,n);
+    p = search_1(score, n);
     for (int i = 0; i < 4; ++i) {
         cout << *(p + i) << " ";
     }
 }
 
 //上例 中的学生 ， 找出其 中不及格课程的学生及其学生号 。
-float *nupass_search_8_26(float (*p)[4]){  //传入所需要处理的 行地址
+float *nupass_search_8_26(float (*p)[4]) {  //传入所需要处理的 行地址
     float *q;
     q = NULL;
     for (int i = 0; i < 4; ++i) {
-        if(*(*p + i) < 60)           // (*p + i) 中 需p表示 所要处理的行 起始地址。 *p 表示*(p + 0) 即这行第一列地址 即 &p[][0]
-                                    // (*p + i) 表示这行的第i列 地址 => 最后再取* 表示这行i列元素的值
-         q = *(p + 0);    //返回这行0列的起始地址,即q[][] 类型为float *
+        if (*(*p + i) < 60)           // (*p + i) 中 需p表示 所要处理的行 起始地址。 *p 表示*(p + 0) 即这行第一列地址 即 &p[][0]
+            // (*p + i) 表示这行的第i列 地址 => 最后再取* 表示这行i列元素的值
+            q = *(p + 0);    //返回这行0列的起始地址,即q[][] 类型为float *
     }               //*p 表示*(p + 0) 即这行第一列地址 类型为floa *
     return q;
 }
 
-void L_8_26(){
-    float score[ ][4] = { {60 , 70 , 80 , 90 } , { 56 , 89 , 67 , 88 } , { 34 , 78 , 90 , 66 } } ;
+void L_8_26() {
+    float score[][4] = {{60, 70, 80, 90},
+                        {56, 89, 67, 88},
+                        {34, 78, 90, 66}};
     float *p;
     for (int i = 0; i < 3; ++i) {                   // score+i 就是把第i行的起始地址传给 形参 float (*p)[4]
-         p = nupass_search_8_26(score + i);     //把每个学生即每行的地址传给search，让search函数去查看每个学生有无挂科
-        if (p == *(score + i)){                 //如果无挂科，search 返回NULL不执行if语句，有挂科，则返回挂科学生即行地址。
-                                                // score+i <=> &score[i] 行起始地址 => *(score + i) <=> score[i] 即score[i][0]地址
-            cout << (p - *score)/4 +1  << " hao " <<"bu ji ge :" <<endl;
+        p = nupass_search_8_26(score + i);     //把每个学生即每行的地址传给search，让search函数去查看每个学生有无挂科
+        if (p == *(score + i)) {                 //如果无挂科，search 返回NULL不执行if语句，有挂科，则返回挂科学生即行地址。
+            // score+i <=> &score[i] 行起始地址 => *(score + i) <=> score[i] 即score[i][0]地址
+            cout << (p - *score) / 4 + 1 << " hao " << "bu ji ge :" << endl;
             for (int j = 0; j < 4; ++j) {                           //p返回是 行第一个元素 起始地址 p[][] 类型为float *
-                cout << *(p + j)<<" ";
+                cout << *(p + j) << " ";
             }
         }
         cout << endl;
@@ -274,91 +288,131 @@ void L_8_26(){
 
 //8-4题   有 n 个整 数 ， 使前 面 各 数 顺序 向 后 移 m 个位置，最后 m 个数变成最前面 m 个数 ，
 // 写一函数实现以上功能，在主函数中输入 η 个整数和输出调整后 的 n 个数 。
-void transform(int *num,int n,int m){
-    int *p;p = num;
+void transform(int *num, int n, int m) {
+    int *p;
+    p = num;
     int b[n];
     for (int i = 0; i < n; ++i) {
         b[i] = p[i];
     }
     for (int i = 0; i < m; ++i) {
-        b[i] = p[n-m+i];
+        b[i] = p[n - m + i];
     }
-    for (int i = 0; i < n-m; ++i) {
-        b[n-i-1] = p[n-m-i-1];
+    for (int i = 0; i < n - m; ++i) {
+        b[n - i - 1] = p[n - m - i - 1];
     }
     for (int i = 0; i < n; ++i) {
-        printf("%d ",b[i]);
+        printf("%d ", b[i]);
     }
 }
 
-void Q_8_4(){
-    int n,m;
+void Q_8_4() {
+    int n, m;
     cout << " enter value n and m:" << endl;
-    scanf("%d %d",&n,&m);
-    int *num = (int *)malloc(sizeof (int ) * n);
+    scanf("%d %d", &n, &m);
+    int *num = (int *) malloc(sizeof(int) * n);
     for (int i = 0; i < n; ++i) {
-        scanf("%d",num+i);
+        scanf("%d", num + i);
     }
-    transform(num,n,m);
+    transform(num, n, m);
 }
+
 //报数 问题 有 n 个人 围 成 一圈，顺序排号 。从第1个人开始报数〈从 1 到 3 报数〉，凡报到3的人退出圈子，问最后留下的是原来第几号的那位。
-void Q_8_5(){
+void Q_8_5() {
     int n;
-    scanf("%d",&n);
-    int *num = (int  * )malloc(sizeof (int )* n);
+    scanf("%d", &n);
+    int *num = (int *) malloc(sizeof(int) * n);
     for (int i = 0; i < n; ++i) {
         *(num + i) = i;
     }
-    int offset,number,quit_number; //分别为偏移量、报的数、退出的人数
+    int offset, number, quit_number; //分别为偏移量、报的数、退出的人数
     offset = number = quit_number = 0;
-    while(quit_number < n-1){   //当推出的人数比1小时
+    while (quit_number < n - 1) {   //当推出的人数比1小时
         if (num[offset] != 0)                   //退出的的人序号为0，当不为0时，number++；报数加一
         {
             number++;
         }
-        if (number == 3){ //如果报数为3
+        if (number == 3) { //如果报数为3
             num[offset] = 0;    //offset处的人退出，并将其值赋值为0
             number = 0;         //计数从新开始
-            quit_number ++;     //推出的人数加一
+            quit_number++;     //推出的人数加一
         }
-        offset ++; //继续处理下一个人
-        if (offset == n){   //当为最后一个人的时候，又往前从第一个开始处理
+        offset++; //继续处理下一个人
+        if (offset == n) {   //当为最后一个人的时候，又往前从第一个开始处理
             offset = 0;
         }
     }
     while (*num == 0)
         num++;
-    cout << num;
+    cout << *num << endl;
+}
+
+//报数重写
+void Q_8_5_1() {
+    int n;
+    scanf("%d", &n);
+    int *num = (int *) malloc(sizeof(int) * n);
+    for (int i = 0; i < n; ++i) {
+        *(num + i) = i;
+    }
+    int offset = 0; //位置
+    int quit_number = 0;//
+    int number = 0; //报的数
+    while (quit_number < n - 1) {//当剩最后一个人的时候，不再进行报数
+        if (num[offset] != 0) {
+            number++;
+        }
+        if (num[offset] == 3) {
+            number = 0;
+            num[offset] = 0;
+            quit_number++;
+        }
+        offset++;
+        if (offset == n) {
+            offset = 0;
+        }
+    }
+//    while (*num == 0){
+//        num++;
+//    }
+//    cout << *num;
+    for (int i = 0; i < n; ++i) {
+        if (num[i] != 0)
+            cout << num[i];
+    }
 }
 
 //报数进阶 => 报数游戏是这样的：有n个人围成一圈，按顺序从1到n编好号。
 // 从第一个人开始报数，报到m（<n）的人退出圈子；下一个人从1开始报数，报到m的人退出圈子。
 // 如此下去，直到留下最后一个人。本题要求编写函数，给出每个人的退出顺序编号。
-void cutoff(int n,int m,int cut[]){
+void cutoff(int n, int m, int cut[]) {
 
 }
-void Q_8_5_1(){
-    int n,m;
-    scanf("%d",&n,&m);
-    int *cut = (int *)malloc(sizeof (int ) * (n-1));
-    cutoff(n,m,cut);
+
+void Q_8_5_2() {
+    int n, m;
+    scanf("%d", &n, &m);
+    int *cut = (int *) malloc(sizeof(int) * (n - 1));
+    cutoff(n, m, cut);
     for (int i = 0; i < n - 1; ++i) {
-        printf("%d",*(cut + i));
+        printf("%d", *(cut + i));
     }
 }
+
 //写一函数，求一个字 符 串 的长度。 在 main 函数中输入字 符 串 ，并输出其长度 。
-void Q_8_6(){
-    char s[] ="ahah";
+void Q_8_6() {
+    char s[] = "ahah";
     char *p;
     int i;
     p = s;
-    for ( i = 0;*p != '\0';p++){
+    for (i = 0; *p != '\0'; p++) {
         i++;
     }
-    printf("%d",i);
+    printf("%d", i);
 }
+
 //有一字 符 串 ，包含 n 个字 符 。 写 一 函数，将此字 符 串 中 从第 m 个字 符 开 始的全 部 字 符 复制成为另 一个字 符  串。
-void Q_8_7(){
+void Q_8_7() {
 //    int n;
 //    scanf("%d",&n);
 //    char *s = (char *)malloc(sizeof (char) * n);
@@ -375,28 +429,301 @@ void Q_8_7(){
 //            printf("chong xin shu ru");
 //        gets(s);
 //    }
-    int m;cin >> m;
+    int m;
+    cin >> m;
     char s1[100];
     char s[] = "habcnjda";
-    char *p; p=s;
+    char *p;
+    p = s;
     char *q;
     int i = 0;
-    for(p = p+m-1;*p != '\0';p++) {
+    for (p = p + m - 1; *p != '\0'; p++) {
         s1[i] = *p;
         i++;
     }
     s1[i] = '\0';
     q = s1;
-    for (;*q != '\0';q++)
-    cout << *q << " ";
+    for (; *q != '\0'; q++)
+        cout << *q << " ";
+}
+
+void Q_8_9() {
+    int num[3][3] = {{1, 2, 3},
+                     {4, 5, 6},
+                     {7, 8, 9}};
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 3; ++j) {
+            cout << num[i][j] << " ";
+        }
+        cout << endl;
+    }
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 3; ++j) {
+            cout << num[j][i] << " ";
+        }
+        cout << endl;
+    }
+}
+
+int averag(int (*stu)[5], int n) {
+    float sum = 0;
+    int *p;
+    for (p = *stu; p < *(stu + n); ++p) {
+        for (int i = 0; i < 5; ++i) {
+            sum += *((p) + i);
+        }
+    }
+    return sum / n;
+}
+
+float firt_average(int stu[][5], int n) {
+    float sum = 0;
+    int (*p)[5];    //用指向一行的指针
+    for (p = stu; p < (stu + n); ++p) {
+        sum += *(*(p) + 0);
+    }
+//    for (int i = 0; i < 3; ++i) {
+//        sum += stu[i][0];
+//    }
+    return sum / n;
+}
+
+void unpass_stu(int stu[4][5], int n) {
+    //int (*p)[5];
+//    int flag = 0;
+    int count[5];
+    for (int m = 0; m < 4; m++) {
+        int flag = 0;               //每次查看一个学生后都把flag 重新置为0
+        for (int i = 0; i < 5; ++i) {
+            if (stu[m][i] < 60) {  //查看5科中是否有不及格的
+                flag++;             //有则++
+            }
+        }
+        if (flag >= 2) {
+            cout << "NO." << m + 1 << " numpass" << endl;
+            float sum = 0;
+            for (int j = 0; j < 5; ++j) {
+                cout << "grade:" << stu[m][j] << " " << endl;
+                sum += stu[m][j];
+            }
+            cout << "aver:" << sum / 5 << endl;
+        }
+    }
+}
+
+//用指针表示二维数组，
+void unpass_stu_1(int stu[][5], int n, int m) {
+    int num[4][5] = {{99, 98, 58, 76, 86,},
+                     {85, 96, 74, 68, 79},
+                     {87, 69, 59, 86, 77},
+                     {55, 56, 64, 59, 75}};
+    int *p;
+    p = *stu;
+//    p = stu[0] +0;
+//    p = &stu[0][0];           //前面这些都是表示0行0列元素的地址，单位是一个元素，指针指向的是列。+1 代表加一个元素
+//    p = *(stu + 0);
+//    p = *(stu + 0) + 0;
+//    p = stu[0];
+    //让p指针指向一个二位数组的第0行第0列的地址，就可以用一维数组来表示二维数组 即p->stu[0][0]
+    //stu[i][j] = *(p + i * 5 + j);
+
+    int (*p1)[5];
+//    p1 = stu + 0; //p1 指向0行起始地址
+//    p1 =  stu;    //stu为二维组名，即0行起始地址 p1 指向0行起始地址
+//    p1 = &stu[m];   //取stu的第4行起始地址，赋值给p1
+//    for (int i = 0; i < 5; ++i) {
+//        cout << *(*p1+i) << " ";
+//    }
+
+    for (int m = 0; m < 4; m++) {
+        int flag = 0;               //每次查看一个学生后都把flag 重新置为0
+        for (int i = 0; i < 5; ++i) {
+            if (*(p + m * 5 + i) < 60) {  //查看5科中是否有不及格的
+                flag++;             //有则++
+            }
+        }
+        if (flag >= 2) {
+            cout << "NO." << m + 1 << " numpass" << endl;
+            float sum = 0;
+            for (int j = 0; j < 5; ++j) {
+                cout << "grade:" << *(p + m * 5 + j) << " " << endl;
+                sum += stu[m][j];
+            }
+            cout << "aver:" << sum / 5 << endl;
+        }
+    }
+}
+
+void str_sort(char *str[]) {
+    char *p, *temp;
+//    p = str[0] ;
+    int min;
+//    for (int i = 0; i < 3-1; ++i) {
+//        min = i;
+//        for (int j = i + 1; j < 3; ++j) {
+//            if(strcmp((p + min),(p + j)) > 0)
+//                min = j;
+//        }
+//        if (min != i){
+//            strcpy(temp,(p + i));
+//            strcpy((p + i),(p + min));
+//            strcpy((p + min),temp);
+//        }
+//    }
+//    for (int i = 0; i < 3-1; ++i) {
+//        min = i;
+//        for (int j = i + 1; j < 3; ++j) {
+//            if(strcmp(str[min],str[j]) > 0)
+//                min = j;
+//        }
+//        if (min != i){
+//            temp = str[i];
+//            str[i] = str[min];
+//            str[min] = temp;
+//        }
+//    }
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 3 - i; ++j) {
+            if (strcmp(*(str + j), *(str + j + 1)) > 0) {
+                temp = *(str + j);
+                *(str + j) = *(str + j + 1);
+                *(str + j + 1) = temp;
+            }
+        }
+    }
+}
+
+void Q_8_11() {
+    char *p[3];
+//    char *str = (char *) malloc(sizeof(char));
+    char str[3][6];
+    for (int i = 0; i < 3; ++i) {
+        p[i] = str[i];              //
+    }
+//    char str[3][6];
+    for (int i = 0; i < 3; ++i) {
+        scanf("%s", p[i]);
+    }
+    str_sort(p);
+
+    for (int i = 0; i < 3; ++i) {
+        cout << p[i] << endl;
+    }
+
 }
 
 
+void Q_8_15() {
+    int stu[4][5] = {{99, 98, 58, 76, 86,},
+                     {85, 96, 74, 68, 79},
+                     {87, 69, 59, 86, 77},
+                     {55, 56, 64, 59, 75}};
+    float f_avr;
+    f_avr = firt_average(stu, 3);
+    cout << f_avr << endl;
+    unpass_stu_1(stu, 4, 3);
+}
+
+//输出一串字符中的数字与非数字
+void Q_8_16() {
+    char *str = (char *) malloc(sizeof(char));
+    int *num = (int *) malloc(sizeof(int));
+    int num_[50], i;
+    gets(str);
+//    char ch = getchar();
+    char *p;
+    int cnt = 0;
+    strlwr(str);
+    for (p = str, i = 0; *p != '\0'; ++p, ++i) {
+        if (*p <= 'z' && *p >= 'a' && *p) {
+            num_[i] = 0;
+            cnt = 0;
+            continue;
+        } else if (*p <= '9' && *p >= '0') {
+            num_[i] = *p - '0';
+
+            *num = *p - '0';
+            num++;
+            // cout << *p-'0';             //把字符型数字转化成int 型数字
+        }
+    }
+    for (int j = 0; j < i; ++j) {
+        cout << num_[i] << " ";
+    }
+
+}
+
+void Q_8_16_1() {
+    char *str = (char *) malloc(sizeof(char)), *p;
+    int *number = (int *) malloc(sizeof(int));
+    gets(str);
+    strcat(str, "@");    //strcat(str1,str2)把str2 结到str1 后面。str如果最后面全为数字，没有非数字，无法将其提去到number数组中
+//    cout << str;      所以要在结尾加一个非数字符号。
+
+    int i = 0, j = 10, num = 0, sum = 0; // i 为number 下标，j用来将sum扩大十倍；num来判断这个字符是否为数字
+    for (p = str; *p != '\0'; ++p) {
+        if (*p <= '9' && *p >= '0') {
+            num = 1;
+            sum = sum * j + *p - '0'; //每次遇到数字都把sum*10 + 这个数字，就能直接转化为十进制数
+        } else if (num == 1) {         //  如果不是数字，并且前一个是数，这将num置为0；把sum运算得到的数放在数组中，同时重置sum
+            num = 0;
+            number[i++] = sum;
+            sum = 0;
+        }
+    }
+    for (int k = 0; k < i; ++k) {
+        cout << number[k] << " ";
+    }
+    free(number);
+    free(str);
+}
+
+void Q_8_17() {
+    int ans;
+    char *s1 = (char *) malloc(sizeof(char)), *p1;
+    char *s2 = (char *) malloc(sizeof(char)), *p2;
+    scanf("%s", s1);
+    scanf("%s", s2);
+    p1 = s1;
+    p2 = s2;
+    for (; *p1 != '\0' || *p2 != '\0'; p1++, p2++) {
+        if (*p1 != *p2) {
+            ans = *p1 - *p2;
+            break;
+        }
+    }
+    if (*p1 != '\0' && *p2 != '\0')
+        cout << 0;
+    cout << ans;
+}
+
+void Q_2_20_sort(char *str[], int n) {
+    char **p,**q,*temp;
+    for (p = str; p < str +n; ++p) {
+        for (q = p + 1; q < str +n; ++q) {
+            if (**p > **q){
+                temp = *q;
+                *q = *p;
+                *p = temp;
+            }
+        }
+    }
+
+}
+
+void Q_8_20() {
+    char *str[5] = {"afsaf", "dfhg", "sgeg", "hshsh", "tyjt"};
+    Q_2_20_sort(str, 5);
+    for (int i = 0; i < 5; ++i) {
+        cout << str[i] << " ";
+    }
+
+}
 
 int main() {
 //    demo_str_chr();
 // demo_2();
-    int a[]={1,2,3,4,5,6};
+    int a[] = {1, 2, 3, 4, 5, 6};
     int *p;
     for (p = a; p < (a + 6); p++) {
 //        printf("%d ",*p);
@@ -412,7 +739,15 @@ int main() {
 //     Q_8_4();
 //    Q_8_5();
 //    Q_8_6();
-    Q_8_7();
+//    Q_8_7();
+//    Q_8_9();
+    //   Q_8_11();
+//    Q_8_15();
+//    Q_8_16();
+
+//    Q_8_16_1();
+//    Q_8_17();
+    Q_8_20();
     return 0;
 }
 

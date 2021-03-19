@@ -1,0 +1,3 @@
+"D:\NewFile\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\06_Practice_chater_9.dir/objects.a
+D:\Dev-cpp5.4.0\Dev-Cpp\MinGW32\bin\ar.exe cr CMakeFiles\06_Practice_chater_9.dir/objects.a @CMakeFiles\06_Practice_chater_9.dir\objects1.rsp
+D:\Dev-cpp5.4.0\Dev-Cpp\MinGW32\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\06_Practice_chater_9.dir/objects.a -Wl,--no-whole-archive  -o 06_Practice_chater_9.exe -Wl,--out-implib,lib06_Practice_chater_9.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\06_Practice_chater_9.dir\linklibs.rsp

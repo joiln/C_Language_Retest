@@ -7,6 +7,7 @@
 #include <cmath>
 #include <string.h>
 #include <stdlib.h>
+#include <algorithm>
 
 using namespace std;
 
@@ -35,6 +36,7 @@ void Q_9_3(){
         for (int j = 0; j < 3; ++j) {
             printf("%s %d",leader[j].name,leader[j].count);
         }
+        sort(1,2);
     }
 
 }
@@ -90,18 +92,20 @@ typedef struct list{
 Linklist *init_list(int n){                          //指针函数，创建完链表后返回链表的起始地址，给主函数中的头节点 head
     //Linklist *head,p1,p2;
     Linklist *header =(Linklist *)malloc(sizeof (Linklist));  //创建一个头节点，
-    Linklist *p =header;  //创建一个p指针，起桥梁作用，用于遍历链表
+    Linklist *p = header;  //创建一个p指针，起桥梁作用，用于遍历链表
 
     for (int i = 0; i < n ; ++i) {
         Linklist *node = (Linklist *)malloc(sizeof (Linklist));
-        node->data = i+1;
+        node->data = i + 1;
         node->next =NULL;
         //
-        p->next = node;       //让头节点指向node
+        p->next = node;        //让头节点指向node
         p = p->next;        //让p向后移，现在p指向node，
     }
     return header;
 }
+
+
 //打印链表,本链表有头节点，需要处理头节点无数据的问题
 void show(Linklist *list_header){
     Linklist *p;  //p 是用来遍历链表的锚点
@@ -235,7 +239,7 @@ void swap(int *a,int *b){
 }
 //划分左右半区函数
 int partition(int *num,int low,int high){
-    int p = *(num + high);  //基准数p每次都是最后一个
+    int p = *(num + high);  //基准数p每次都是最后一个 => num[high]
     int i = low;            //i 指向第一个数
     int j = high - 1;       //j 指向基准数p前一个数
 
@@ -248,8 +252,11 @@ int partition(int *num,int low,int high){
         if (i < j) //如果i、j 没有交错，则交换i与j处的数。
             swap(num + i,num + j);
         else {  //否则，i > j 小的下标比大的下标大，发生交错，停止遍历。
-            break;
+
+
+
         }
+
     }
     //把i处的数与最后一个元素交换，即基准数交换，把基准数放到i的位置
     swap(num + i,num + high);

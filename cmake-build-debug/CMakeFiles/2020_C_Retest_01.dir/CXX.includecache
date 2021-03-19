@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Data_Structure_Codes/C_Language_Retest/2020_C_Retest_01.cpp
+stdio.h
+-
+string.h
+-
+stdio.h
+-
+iostream
+-
+algorithm
+-
+string
+-
+

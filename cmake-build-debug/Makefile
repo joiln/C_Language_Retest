@@ -221,6 +221,19 @@ Q_3_6/fast:
 .PHONY : 01_Practice_chapter_5/fast
 
 #=============================================================================
+# Target rules for targets named 07_Practice_chater_10
+
+# Build rule for target.
+07_Practice_chater_10: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 07_Practice_chater_10
+.PHONY : 07_Practice_chater_10
+
+# fast build rule for target.
+07_Practice_chater_10/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\07_Practice_chater_10.dir\build.make CMakeFiles/07_Practice_chater_10.dir/build
+.PHONY : 07_Practice_chater_10/fast
+
+#=============================================================================
 # Target rules for targets named Q_4_9.cpp
 
 # Build rule for target.
@@ -312,6 +325,19 @@ run_nian/fast:
 .PHONY : 04_Practice_chapter_7/fast
 
 #=============================================================================
+# Target rules for targets named 2020_3
+
+# Build rule for target.
+2020_3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 2020_3
+.PHONY : 2020_3
+
+# fast build rule for target.
+2020_3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_3.dir\build.make CMakeFiles/2020_3.dir/build
+.PHONY : 2020_3/fast
+
+#=============================================================================
 # Target rules for targets named 05_Practice_chapter_8
 
 # Build rule for target.
@@ -349,6 +375,58 @@ System_Question: cmake_check_build_system
 System_Question/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\System_Question.dir\build.make CMakeFiles/System_Question.dir/build
 .PHONY : System_Question/fast
+
+#=============================================================================
+# Target rules for targets named 2020_C_Retest_01
+
+# Build rule for target.
+2020_C_Retest_01: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 2020_C_Retest_01
+.PHONY : 2020_C_Retest_01
+
+# fast build rule for target.
+2020_C_Retest_01/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_C_Retest_01.dir\build.make CMakeFiles/2020_C_Retest_01.dir/build
+.PHONY : 2020_C_Retest_01/fast
+
+#=============================================================================
+# Target rules for targets named 2020_3_1.cpp
+
+# Build rule for target.
+2020_3_1.cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 2020_3_1.cpp
+.PHONY : 2020_3_1.cpp
+
+# fast build rule for target.
+2020_3_1.cpp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_3_1.cpp.dir\build.make CMakeFiles/2020_3_1.cpp.dir/build
+.PHONY : 2020_3_1.cpp/fast
+
+#=============================================================================
+# Target rules for targets named 2020_5.c
+
+# Build rule for target.
+2020_5.c: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 2020_5.c
+.PHONY : 2020_5.c
+
+# fast build rule for target.
+2020_5.c/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_5.c.dir\build.make CMakeFiles/2020_5.c.dir/build
+.PHONY : 2020_5.c/fast
+
+#=============================================================================
+# Target rules for targets named 2020_4
+
+# Build rule for target.
+2020_4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 2020_4
+.PHONY : 2020_4
+
+# fast build rule for target.
+2020_4/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_4.dir\build.make CMakeFiles/2020_4.dir/build
+.PHONY : 2020_4/fast
 
 01_Practice_chapter_5.obj: 01_Practice_chapter_5.cpp.obj
 
@@ -538,6 +616,168 @@ System_Question/fast:
 06_Practice_chater_9.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\06_Practice_chater_9.dir\build.make CMakeFiles/06_Practice_chater_9.dir/06_Practice_chater_9.cpp.s
 .PHONY : 06_Practice_chater_9.cpp.s
+
+07_Practice_chater_10.obj: 07_Practice_chater_10.cpp.obj
+
+.PHONY : 07_Practice_chater_10.obj
+
+# target to build an object file
+07_Practice_chater_10.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\07_Practice_chater_10.dir\build.make CMakeFiles/07_Practice_chater_10.dir/07_Practice_chater_10.cpp.obj
+.PHONY : 07_Practice_chater_10.cpp.obj
+
+07_Practice_chater_10.i: 07_Practice_chater_10.cpp.i
+
+.PHONY : 07_Practice_chater_10.i
+
+# target to preprocess a source file
+07_Practice_chater_10.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\07_Practice_chater_10.dir\build.make CMakeFiles/07_Practice_chater_10.dir/07_Practice_chater_10.cpp.i
+.PHONY : 07_Practice_chater_10.cpp.i
+
+07_Practice_chater_10.s: 07_Practice_chater_10.cpp.s
+
+.PHONY : 07_Practice_chater_10.s
+
+# target to generate assembly for a file
+07_Practice_chater_10.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\07_Practice_chater_10.dir\build.make CMakeFiles/07_Practice_chater_10.dir/07_Practice_chater_10.cpp.s
+.PHONY : 07_Practice_chater_10.cpp.s
+
+2020_3.obj: 2020_3.cpp.obj
+
+.PHONY : 2020_3.obj
+
+# target to build an object file
+2020_3.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_3.dir\build.make CMakeFiles/2020_3.dir/2020_3.cpp.obj
+.PHONY : 2020_3.cpp.obj
+
+2020_3.i: 2020_3.cpp.i
+
+.PHONY : 2020_3.i
+
+# target to preprocess a source file
+2020_3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_3.dir\build.make CMakeFiles/2020_3.dir/2020_3.cpp.i
+.PHONY : 2020_3.cpp.i
+
+2020_3.s: 2020_3.cpp.s
+
+.PHONY : 2020_3.s
+
+# target to generate assembly for a file
+2020_3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_3.dir\build.make CMakeFiles/2020_3.dir/2020_3.cpp.s
+.PHONY : 2020_3.cpp.s
+
+2020_3_1.obj: 2020_3_1.cpp.obj
+
+.PHONY : 2020_3_1.obj
+
+# target to build an object file
+2020_3_1.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_3_1.cpp.dir\build.make CMakeFiles/2020_3_1.cpp.dir/2020_3_1.cpp.obj
+.PHONY : 2020_3_1.cpp.obj
+
+2020_3_1.i: 2020_3_1.cpp.i
+
+.PHONY : 2020_3_1.i
+
+# target to preprocess a source file
+2020_3_1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_3_1.cpp.dir\build.make CMakeFiles/2020_3_1.cpp.dir/2020_3_1.cpp.i
+.PHONY : 2020_3_1.cpp.i
+
+2020_3_1.s: 2020_3_1.cpp.s
+
+.PHONY : 2020_3_1.s
+
+# target to generate assembly for a file
+2020_3_1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_3_1.cpp.dir\build.make CMakeFiles/2020_3_1.cpp.dir/2020_3_1.cpp.s
+.PHONY : 2020_3_1.cpp.s
+
+2020_4.obj: 2020_4.cpp.obj
+
+.PHONY : 2020_4.obj
+
+# target to build an object file
+2020_4.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_4.dir\build.make CMakeFiles/2020_4.dir/2020_4.cpp.obj
+.PHONY : 2020_4.cpp.obj
+
+2020_4.i: 2020_4.cpp.i
+
+.PHONY : 2020_4.i
+
+# target to preprocess a source file
+2020_4.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_4.dir\build.make CMakeFiles/2020_4.dir/2020_4.cpp.i
+.PHONY : 2020_4.cpp.i
+
+2020_4.s: 2020_4.cpp.s
+
+.PHONY : 2020_4.s
+
+# target to generate assembly for a file
+2020_4.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_4.dir\build.make CMakeFiles/2020_4.dir/2020_4.cpp.s
+.PHONY : 2020_4.cpp.s
+
+2020_5.obj: 2020_5.c.obj
+
+.PHONY : 2020_5.obj
+
+# target to build an object file
+2020_5.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_5.c.dir\build.make CMakeFiles/2020_5.c.dir/2020_5.c.obj
+.PHONY : 2020_5.c.obj
+
+2020_5.i: 2020_5.c.i
+
+.PHONY : 2020_5.i
+
+# target to preprocess a source file
+2020_5.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_5.c.dir\build.make CMakeFiles/2020_5.c.dir/2020_5.c.i
+.PHONY : 2020_5.c.i
+
+2020_5.s: 2020_5.c.s
+
+.PHONY : 2020_5.s
+
+# target to generate assembly for a file
+2020_5.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_5.c.dir\build.make CMakeFiles/2020_5.c.dir/2020_5.c.s
+.PHONY : 2020_5.c.s
+
+2020_C_Retest_01.obj: 2020_C_Retest_01.cpp.obj
+
+.PHONY : 2020_C_Retest_01.obj
+
+# target to build an object file
+2020_C_Retest_01.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_C_Retest_01.dir\build.make CMakeFiles/2020_C_Retest_01.dir/2020_C_Retest_01.cpp.obj
+.PHONY : 2020_C_Retest_01.cpp.obj
+
+2020_C_Retest_01.i: 2020_C_Retest_01.cpp.i
+
+.PHONY : 2020_C_Retest_01.i
+
+# target to preprocess a source file
+2020_C_Retest_01.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_C_Retest_01.dir\build.make CMakeFiles/2020_C_Retest_01.dir/2020_C_Retest_01.cpp.i
+.PHONY : 2020_C_Retest_01.cpp.i
+
+2020_C_Retest_01.s: 2020_C_Retest_01.cpp.s
+
+.PHONY : 2020_C_Retest_01.s
+
+# target to generate assembly for a file
+2020_C_Retest_01.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2020_C_Retest_01.dir\build.make CMakeFiles/2020_C_Retest_01.dir/2020_C_Retest_01.cpp.s
+.PHONY : 2020_C_Retest_01.cpp.s
 
 5_3.obj: 5_3.cpp.obj
 
@@ -851,6 +1091,12 @@ help:
 	@echo ... 04_Practice_chapter_7
 	@echo ... 05_Practice_chapter_8
 	@echo ... 06_Practice_chater_9
+	@echo ... 07_Practice_chater_10
+	@echo ... 2020_3
+	@echo ... 2020_3_1.cpp
+	@echo ... 2020_4
+	@echo ... 2020_5.c
+	@echo ... 2020_C_Retest_01
 	@echo ... 5_3
 	@echo ... 5_8
 	@echo ... C_Language_Retest
@@ -882,6 +1128,24 @@ help:
 	@echo ... 06_Practice_chater_9.obj
 	@echo ... 06_Practice_chater_9.i
 	@echo ... 06_Practice_chater_9.s
+	@echo ... 07_Practice_chater_10.obj
+	@echo ... 07_Practice_chater_10.i
+	@echo ... 07_Practice_chater_10.s
+	@echo ... 2020_3.obj
+	@echo ... 2020_3.i
+	@echo ... 2020_3.s
+	@echo ... 2020_3_1.obj
+	@echo ... 2020_3_1.i
+	@echo ... 2020_3_1.s
+	@echo ... 2020_4.obj
+	@echo ... 2020_4.i
+	@echo ... 2020_4.s
+	@echo ... 2020_5.obj
+	@echo ... 2020_5.i
+	@echo ... 2020_5.s
+	@echo ... 2020_C_Retest_01.obj
+	@echo ... 2020_C_Retest_01.i
+	@echo ... 2020_C_Retest_01.s
 	@echo ... 5_3.obj
 	@echo ... 5_3.i
 	@echo ... 5_3.s

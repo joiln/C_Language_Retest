@@ -9,8 +9,12 @@
 D:/Data_Structure_Codes/C_Language_Retest/04_Practice_chater_7.cpp
 iostream
 -
-cstdio
+stdio.h
 -
-cmath
+math.h
+-
+string.h
+-
+stdlib.h
 -
 
